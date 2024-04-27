@@ -12,4 +12,34 @@ var lengthOfLongestSubstring = function (s) {
   }
   return max;
 };
-console.log('[ lengthOfLongestSubstring("abcabcbb") ]', lengthOfLongestSubstring("abcabcbb"))
+// console.log(lengthOfLongestSubstring("abcabcbb"))
+console.log(lengthOfLongestSubstring("pwwkew"))
+// const isValid = function (s) {
+//   if (s.length % 2 === 1) {
+//     return false;
+//   }
+//   const regObj = {
+//     "{": "}",
+//     "(": ")",
+//     "[": "]",
+//   };
+//   let stack = [];
+//   for (let i = 0; i < s.length; i++) {
+//     if (s[i] === "{" || s[i] === "(" || s[i] === "[") {
+//       stack.push(s[i]);
+//     } else {
+//       debugger
+//       const cur = stack.pop();
+//       if (s[i] !== regObj[cur]) {
+//         return false;
+//       }
+//     }
+//   }
+
+//   if (stack.length) {
+//     return false;
+//   }
+
+//   return true;
+// };
+// console.log(isValid("(]"))

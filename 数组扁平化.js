@@ -19,4 +19,13 @@ function flat(arr, depth = 1) {
   return arr.slice();
 
 }
-console.log(flat([2, [33, 45], [5, 4, [33]], 8]))
+function flat2(arr, depth = 1) {
+  if (depth > 0) {
+    return arr.reduce((pre, cur) => {
+      return pre.concat(Array.isArray(cur) ? flat2(cur, depth - 1) : cur)
+    }, [])
+  }
+  return arr.slice()
+
+}
+console.log(flat2([2, [33, 45], [5, 4, [33]], 8]))
