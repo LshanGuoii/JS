@@ -31,4 +31,3 @@ new Promise((resolve) => {
 })
 console.log('script end')
 
-

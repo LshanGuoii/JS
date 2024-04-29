@@ -10,15 +10,13 @@ function throttle(fn, interval) {
   }
 }
 function throttle(fn, interval) {
-  let lastTime = null
-
-  return function () {
-
-    let currentTime = new Date().getTime()
-    cTime = interval - (currentTime - lastTime)
-    if (cTime <= 0) {
-      fn()
-      lastTime = currentTime
-    }
+ let lastTime = 0
+ return function(...args) {
+  const current = new Date().getTime()
+  let ctime = interval - (current- lastTime)
+  if (ctime <=0) {
+    fn()
+    lastTime = ctime
   }
+ }
 }
